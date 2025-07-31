@@ -1,5 +1,6 @@
 import 'package:effect/router/app_router.dart';
 import 'package:effect/ui/download_button_app/app_store_page.dart';
+import 'package:effect/ui/parallax_recipe_app/parallax_recipe_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         AppRouter.main: (context) => MainPage(),
         AppRouter.appStore: (context) => AppStore(),
+        AppRouter.parallaxRecipeApp: (context) => ParallaxRecipeApp(),
       },
       initialRoute: AppRouter.main,
     );
@@ -41,6 +43,15 @@ class MainPage extends StatelessWidget {
                     Navigator.pushNamed(context, AppRouter.appStore);
                   },
                   child: Text("App Store"),
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRouter.parallaxRecipeApp);
+                  },
+                  child: Text("Parallax Recipe"),
                 ),
               ),
             ],
