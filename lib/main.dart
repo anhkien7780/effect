@@ -1,4 +1,5 @@
 import 'package:effect/router/app_router.dart';
+import 'package:effect/ui/animation_playground/playground.dart';
 import 'package:effect/ui/download_button_app/app_store_page.dart';
 import 'package:effect/ui/parallax_recipe_app/parallax_recipe_app.dart';
 import 'package:effect/ui/shimmer_loading_app/shimmer_loading_app.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         AppRouter.main: (context) => MainPage(),
+        AppRouter.playground: (context) => Playground(),
         AppRouter.appStore: (context) => AppStore(),
         AppRouter.parallaxRecipeApp: (context) => ParallaxRecipeApp(),
         AppRouter.shimmerLoadingApp: (context) => ShimmerLoadingApp(),
@@ -74,6 +76,15 @@ class MainPage extends StatelessWidget {
                     Navigator.pushNamed(context, AppRouter.staggeredMenuApp);
                   },
                   child: Text("Staggered Menu"),
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRouter.playground);
+                  },
+                  child: Text("Playground"),
                 ),
               ),
             ],
