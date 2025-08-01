@@ -2,6 +2,7 @@ import 'package:effect/router/app_router.dart';
 import 'package:effect/ui/download_button_app/app_store_page.dart';
 import 'package:effect/ui/parallax_recipe_app/parallax_recipe_app.dart';
 import 'package:effect/ui/shimmer_loading_app/shimmer_loading_app.dart';
+import 'package:effect/ui/staggered_menu_app/staggered_menu_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         AppRouter.appStore: (context) => AppStore(),
         AppRouter.parallaxRecipeApp: (context) => ParallaxRecipeApp(),
         AppRouter.shimmerLoadingApp: (context) => ShimmerLoadingApp(),
+        AppRouter.staggeredMenuApp: (context) => Menu(),
       },
       initialRoute: AppRouter.main,
     );
@@ -63,6 +65,15 @@ class MainPage extends StatelessWidget {
                     Navigator.pushNamed(context, AppRouter.shimmerLoadingApp);
                   },
                   child: Text("Shimmer Loading"),
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRouter.staggeredMenuApp);
+                  },
+                  child: Text("Staggered Menu"),
                 ),
               ),
             ],
