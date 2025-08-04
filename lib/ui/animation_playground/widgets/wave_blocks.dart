@@ -4,18 +4,19 @@ class WaveBlocks extends StatelessWidget {
   const WaveBlocks({
     super.key,
     required this.animationDuration,
-    required this.blockCount,
+    required this.column, required this.row,
   });
 
   final Duration animationDuration;
-  final int blockCount;
+  final int column;
+  final int row;
 
   @override
   Widget build(BuildContext context) {
     final animationDurationMilliseconds = animationDuration.inMilliseconds;
 
     final delay = Duration(
-      milliseconds: (animationDurationMilliseconds / (blockCount * 2)).toInt(),
+      milliseconds: (animationDurationMilliseconds / (column * 2)).toInt(),
     );
 
     return Scaffold(
@@ -23,9 +24,9 @@ class WaveBlocks extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(blockCount, (index) {
+            children: List.generate(row, (index) {
               return RowWave(
-                blockCount: blockCount,
+                blockCount: column,
                 delay: delay * index,
                 animationDuration: animationDuration,
               );
