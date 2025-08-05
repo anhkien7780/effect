@@ -1,16 +1,7 @@
-# effect
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![appstore](https://github.com/user-attachments/assets/294ef054-d6f1-4d11-b6f6-7d5f0c4e3d89)
+![parallax](https://github.com/user-attachments/assets/a338aca8-8dee-450e-8ee9-80596ccc3b8c)
+![shimmer_loading](https://github.com/user-attachments/assets/99d59f69-9dda-4713-b8f6-660b51375aa1)
+![staggered_menu](https://github.com/user-attachments/assets/cf4fb2cf-3054-423a-a816-5f06935bad55)
+![boing_block](https://github.com/user-attachments/assets/5388be4e-8ccf-4605-9992-68e1497e60cc)
+![loading_circle](https://github.com/user-attachments/assets/678adc68-8972-4465-9e8e-97e97ab6366f)
+![wave_block](https://github.com/user-attachments/assets/9d215439-734e-41ec-96ba-4bacd6fd7ccd)
